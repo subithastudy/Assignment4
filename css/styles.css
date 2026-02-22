@@ -1,0 +1,493 @@
+/* Import google font */
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bungee&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Noto+Sans+TC:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playwrite+AT:ital,wght@0,100..400;1,100..400&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=SN+Pro:ital,wght@0,200..900;1,200..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+/* Global elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200px;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  background: radial-gradient(circle at top, #5b1f88 0%, #0b061b 55%, #04030c 100%);
+  color: #ffffff;
+}
+
+/* Header styling */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  padding: 14px 0;
+  background: rgba(10, 5, 25, 0.55);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Container styling */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.nav-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Navigation styling */
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* Navigation menus styling */
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 150px;
+}
+
+/* Navigation menus styling for larger devices */
+@media(max-width: 768px) {
+  .nav-menu {
+    gap: 100px;
+  }
+}
+
+/* Navigation menus styling for smaller devices */
+@media(max-width: 576px) {
+  .nav-menu {
+    gap: 20px;
+    font-size: 2px;
+  }
+}
+
+/* Navigation menus anchor tags styling */
+.nav-menu li a {
+  display: flex;
+  position: relative;
+  gap: 35px;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+.nav-menu li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 2px;
+  background-color: #6fe3ff;
+  transition: width 0.3s ease;
+}
+
+/* navigation menus hover effect styling */
+.nav-menu li a:hover {
+  color: #6fe3ff;
+  opacity: 1;
+}
+
+.nav-menu li a:hover::after,
+.nav-menu li a.active::after {
+  color: #6fe3ff;
+  opacity: 1;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Button styling for larger devices */
+@media(min-width: 768px) {
+  .btn {
+    display: inline-block;
+    padding: 12px 26px;
+    border-radius: 18px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    background: linear-gradient(90deg, #6fe3ff, #7b66ff);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease, filter 0.3s ease;
+  }
+}
+
+/* Button styling for smaller devices */
+@media(max-width: 768px) {
+  .btn {
+    display: inline-block;
+    padding: 12px 26px;
+    border-radius: 18px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    background: linear-gradient(90deg, #6fe3ff, #7b66ff);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease, filter 0.3s ease;
+  }
+}
+
+/* Button hover styling */
+.btn:hover {
+  transform: translateY(-3px);
+  filter: brightness(1.15);
+}
+
+/* Button active styling */
+.btn:active {
+  transform: scale(0.97);
+}
+
+/* Hero section styling for smaller devices */
+@media(min-width: 768px) {
+  .hero {
+    position: relative;
+    padding: 70px 0 50px;
+  }
+}
+
+/* Hero section styling for bigger devices */
+@media(max-width: 768px) {
+  .hero {
+    padding-top: 60px;
+  }
+}
+
+/* Hero grid styling for smaller devices */
+@media(min-width: 768px) {
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    align-items: center;
+    gap: 50px;
+  }
+}
+
+/* Hero grid styling for larger devices */
+@media(max-width: 768px) {
+  .hero-text {
+    padding-bottom: 60px;
+  }
+}
+
+/* Hero section h1 styling */
+.hero-text h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+/* Hero section h1 styling for larger devices */
+@media((min-width: 768px) and (max-width: 992px)) {
+  .hero-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 6px;
+  }
+}
+
+/* Hero section h1 styling for smaller devices */
+@media(max-width: 576px) {
+  .hero-text h1 {
+    font-size: 2rem;
+    margin-bottom: 6px;
+  }
+}
+
+/* Hero section h2 styling */
+@media(min-width: 992px) {
+  .hero-text h2 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #6fe3ff;
+    margin-bottom: 18px;
+  }
+}
+
+/* Hero section h2 styling for larger devices */
+@media(max-width: 992px) {
+  .hero-text h2 {
+    font-size: 1rem;
+    color: #6fe3ff;
+  }
+}
+
+/* Hero section h2 styling for smaller devices */
+@media(max-width: 576px) {
+  .hero-text h2 {
+    font-size: 0.8rem;
+    color: #6fe3ff;
+  }
+}
+
+/* Hero section paragraph styling */
+.hero-text p {
+  font-size: 0.95rem;
+  opacity: 0.8;
+  line-height: 1.8;
+  max-width: 520px;
+  padding-bottom: 20px;
+  text-align: justify;
+}
+
+/* Hero section profile photo styling */
+.hero-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-img img {
+  width: 320px;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 18px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
+  animation: floatPic 4s ease-in-out infinite;
+}
+
+@keyframes floatPic {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+/* Hero section profile photo styling for smaller deviecs */
+@media((max-width: 576px)) {
+  .hero-img img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 18px;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
+    animation: floatPic 4s ease-in-out infinite;
+  }
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+/* About section styling */
+.about {
+  padding: 80px 0 30px;
+  position: relative;
+}
+
+/* About section heading styling */
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: #6fe3ff;
+}
+
+.center {
+  text-align: center;
+}
+
+/* About section paragraph styling */
+.about-text {
+  max-width: 850px;
+  margin: auto;
+  opacity: 0.78;
+  font-size: 0.92rem;
+  line-height: 1.9;
+  text-align: justify;
+}
+
+/* Projects section styling */
+.projects {
+  padding: 60px 0;
+}
+
+/* Projects left section styling for larger devices */
+@media(min-width: 768px) {
+  .project-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+}
+
+/* Projects left section styling for smaller devices */
+@media(max-width: 768px) {
+  .project-row {
+    gap: 30px;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+}
+
+/* Projects right section styling */
+.project-row.reverse {
+  direction: rtl;
+}
+
+.project-row.reverse .project-text {
+  direction: ltr;
+}
+
+.project-text {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 22px;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+}
+
+.project-text h3 {
+  font-size: 1.35rem;
+  margin-bottom: 10px;
+}
+
+/* Project sections image styling */
+.project-img {
+  padding-top: 20px;
+}
+
+.project-img img {
+  height: 230px;
+  object-fit: cover;
+  border-radius: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.4);
+}
+
+.desc {
+  opacity: 0.75;
+  line-height: 1.7;
+  font-size: 0.92rem;
+  text-align: justify;
+}
+
+/* Contact section styling */
+.contact {
+  padding: 70px 0;
+}
+
+/* Contact grid section styling for larger devices */
+@media(min-width: 768px) {
+  .contact-grid {
+    margin-top: 35px;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 35px;
+    align-items: start;
+  }
+}
+
+/* Contact grid section styling for smaller devices */
+@media(max-width: 768px) {
+  .contact-grid {
+    margin-top: 35px;
+    gap: 35px;
+    align-items: start;
+  }
+}
+
+/* Contact left section styling */
+.contact-left h3 {
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+}
+
+.contact-left p {
+  opacity: 0.75;
+  line-height: 1.8;
+  font-size: 0.92rem;
+  text-align: justify;
+}
+
+.contact-details {
+  margin-top: 18px;
+}
+
+.contact-details p {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 12px;
+  opacity: 0.85;
+}
+
+/* Contact section icons styling */
+.contact-details i {
+  color: #6fe3ff;
+}
+
+/* Contact right section form styling */
+.contact-form {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  padding: 22px;
+  border-radius: 22px;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.35);
+}
+
+.field {
+  margin-bottom: 14px;
+}
+
+/* Contact form label styling */
+.field label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+/* Contact form input and textarea styling */
+.field input,
+.field textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(0, 0, 0, 0.25);
+  color: #fff;
+  outline: none;
+  font-size: 0.92rem;
+}
+
+/* Contact form input and textarea focus styling */
+.field input:focus,
+.field textarea:focus {
+  border-color: rgba(111, 227, 255, 0.55);
+}
+
+.contact-form .btn {
+  width: 100%;
+}
+
+/* Footer section styling */
+.footer {
+  padding: 22px 0;
+  text-align: center;
+  opacity: 0.7;
+  font-size: 0.85rem;
+  border-top: 1px solid white;
+}
