@@ -6,25 +6,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Subitha S | Portfolio</title>
+    <!-- Code to display icons -->
     <script src="https://kit.fontawesome.com/fd82d651b3.js" crossorigin="anonymous"></script>
+    <!-- External css styling -->
     <link rel="stylesheet" href="css/styles.css" />
-
 </head>
 <!-- Head ends -->
 
 <!-- Body started -->
 <body>
-    
+
     <!-- Header started -->
     <header class="header">
         <div class="container nav-wrap">
             <nav class="navbar">
-                <ul class="nav-menu">
-                    <li><a href="#home">HOME</a></li>
-                    <li><a href="#about">ABOUT</a></li>
-                    <li><a href="#projects">PROJECTS</a></li>
-                    <li><a href="#contact">CONTACT</a></li>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#home" onclick="closeMenu()">HOME</a></li>
+                    <li><a href="#about" onclick="closeMenu()">ABOUT</a></li>
+                    <li><a href="#projects" onclick="closeMenu()">PROJECTS</a></li>
+                    <li><a href="#contact" onclick="closeMenu()">CONTACT</a></li>
                 </ul>
+                <!-- Display hamburger icon -->
+                <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
             </nav>
         </div>
     </header>
@@ -182,6 +185,17 @@
         <p>&copy; 2026 Subitha S. All rights reserved.</p>
     </footer>
     <!-- Footer ends -->
+
+    <script>
+        // Script to display hamburger navigation menus
+        function toggleMenu() {
+            document.getElementById("navMenu").classList.toggle("active");
+        }
+        // Script to close hamburger navigation menus
+        function closeMenu() {
+            document.getElementById("navMenu").classList.remove("active");
+        }
+    </script>
 
 </body>
 <!-- Body ends -->
